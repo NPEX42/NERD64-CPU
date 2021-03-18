@@ -62,8 +62,6 @@ public class CPUGUI {
 		pnlOptions = new JPanel();
 		pnlDisplay = new JPanel();
 		pnlInput = new JPanel();
-		outputWindow = new CPUguiOut();
-		outputWindow.OutputGuiCreate();
 		
 		btnLoad = new JButton("Load");
 		btnSave = new JButton("Save");
