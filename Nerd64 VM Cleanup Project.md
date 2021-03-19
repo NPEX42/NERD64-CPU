@@ -76,7 +76,11 @@ public class TextLoader {
 
 ```java
 public class SimpleDictionary {
+    private HashMap<String, String> dictionary = new HashMap<>();
     
+    public int GetInt(String key) {
+      return Integer.parseInt(dictionary.getOrDefault(key, "0"));
+    }
 }
 ```
 
