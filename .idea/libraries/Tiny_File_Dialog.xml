@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Tiny File Dialog">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/libs/Tiny File Dialog" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/libs/Tiny File Dialog" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/libs/Tiny File Dialog" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/libs/Tiny File Dialog" recursive="false" type="SOURCES" />
+  </library>
+</component>
