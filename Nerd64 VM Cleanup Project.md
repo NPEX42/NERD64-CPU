@@ -21,11 +21,11 @@
 - MainWindow
   - Parent / Container for Other UI Components
 - RamView
-  - presents values in Memory
+  - present values in Memory
 - RegisterView
-  - presents values in registers
+  - present values in registers
 - AssemblyView  
-  - Presents the currently running Program
+  - Present the currently running Program
 
 ----
 #### Package - np.vms.nerd64.utils
@@ -34,9 +34,49 @@
 - TextSaver
   - Saves Text Files onto the disk
 - LineParser
-  - Converts Lines of text into Opcodes & Operands using a Dictionary
+  - Convert Lines of text into Opcodes &
+    Operands using a Dictionary & Standard Symbols ($, %, @, #)
+  - Eg. LDA $0001 -> 0010 0001,
+  - ADI $FF -> 0020 00FF
+  - JMP @Loop (Loop = 10) -> 0030 00A0
+- SimpleDictionaryLoader
+  - Loads a textfile containing simple Key-Value pairs, one on each line, separated by the '='
+    character
+- SimpleDictionary
+  - Contains Simple Key-Value Pairs
+----
+## The Code
 
+TextLoader
 
+```java
+public class TextLoader {
+    public static String[] LoadTextFile(String path) throws RuntimeException {
+        try {
+            BufferedReader reader = new BufferedReader(
+            	new FileReader(path)
+            );
+            StringBuffer buffer = new StringBuffer();
+            String line;
+            
+            while((line = buffer.readLine()) != null) {
+                buffer.append(line);
+                buffer.append('\n');
+            }
+            
+            return buffer.toString();
+        } catch (IOException ioex) {
+            throw new RuntimeException(ioex);
+        }
+    }
+}
+```
 
-  
+  SimpleDictionary
+
+```java
+public class SimpleDictionary {
+    
+}
+```
 
