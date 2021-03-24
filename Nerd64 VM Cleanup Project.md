@@ -77,10 +77,31 @@ public class TextLoader {
 ```java
 public class SimpleDictionary {
     private HashMap<String, String> dictionary = new HashMap<>();
+    public SimpleDictionary() {}
+    public SimpleDictionary(HashMap<String, String> _dictionary) {
+        dictionary = _dictionary;
+    }
     
     public int GetInt(String key) {
-      return Integer.parseInt(dictionary.getOrDefault(key, "0"));
+    	return Integer.parseInt(dictionary.getOrDefault(key, "0"));
     }
+    
+    public void SetInt(String key, int value) {
+    	dictionary.put(key, ""+value);
+    }
+    
+    
 }
+```
+
+The Instruction Set
+
+```
+# Memory / IO | 001X
+LDA=0010
+LDI=0011
+LDX=0012
+LDY=0013
+
 ```
 
